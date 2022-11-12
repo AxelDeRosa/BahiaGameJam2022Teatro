@@ -39,6 +39,7 @@ public class objetoInteractuable : MonoBehaviour
         
     }
     // Update is called once per frame
+    //comentario para ver si anda el github xd xd xd xd 
     void Update()
     {
         
