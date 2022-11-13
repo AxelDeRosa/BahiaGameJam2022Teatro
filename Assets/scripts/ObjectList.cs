@@ -21,8 +21,6 @@ public class ObjectList : MonoBehaviour
         var obj = objectLoaded.obj;
         var objName = obj.FantasmaConTexto.name;
         _pickeables[objName] = obj;
-        Debug.Log(obj.name);
-        Debug.Log(objName);
         if (objName != orderList[0].name)
         {
             obj.gameObject.SetActive(false);
@@ -42,7 +40,7 @@ public class ObjectList : MonoBehaviour
         count++;
         if (count < _pickeables.Count)
         {
-            _pickeables[name].enabled = true;
+            _pickeables[ orderList[count].name].gameObject.SetActive(true);
         }
 
     }
