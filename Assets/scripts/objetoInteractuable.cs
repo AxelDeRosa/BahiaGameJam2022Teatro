@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyEvents;
+using NewsSystem;
 using UnityEngine;
 
 public class objetoInteractuable : MonoBehaviour
@@ -31,6 +33,7 @@ public class objetoInteractuable : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        NewsStore.Publish<PickObject>();
         agarrado = true;
         spriteRender.sprite = popout;
         contadorObjetos.cantAgarrado += 1;
