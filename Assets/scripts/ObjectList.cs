@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MyEvents;
 using NewsSystem;
@@ -10,9 +11,14 @@ public class ObjectList : MonoBehaviour
     private Dictionary<string, objetoInteractuable> _pickeables = new Dictionary<string, objetoInteractuable>();
     private int count;
 
-    private void Start()
+    private void Awake()
     {
         NewsStore.Subscribe<ObjectLoaded>(LoadObject);
+    }
+
+    private void Start()
+    {
+        
         NewsStore.Subscribe<PickObject>(PickObject);
     }
 
