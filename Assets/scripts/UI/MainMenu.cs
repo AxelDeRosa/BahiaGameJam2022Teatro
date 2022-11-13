@@ -15,11 +15,13 @@ namespace UI
 
         public void ExitGame()
         {
+            NewsStore.Publish<ButtonClicked>();
             Application.Quit();
         }
 
         public void StartGame()
         {
+            NewsStore.Publish<ButtonClicked>();
             SceneManager.LoadScene("SampleScene",LoadSceneMode.Additive);
             NewsStore.Publish<LevelLoaded>();
             SceneManager.UnloadSceneAsync("MenuStart");

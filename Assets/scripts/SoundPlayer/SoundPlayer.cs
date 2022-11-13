@@ -23,7 +23,7 @@ namespace SoundPlayer
             NewsStore.Subscribe<MainMenuLoaded>(loaded => PlayMusic("MainMenu"));
             NewsStore.Subscribe<LevelLoaded>(loaded => PlayMusic("MusicLevel"));
             NewsStore.Subscribe<ButtonClicked>(loaded => PlayUI("Click"));
-            NewsStore.Subscribe<PickObject>(loaded => PlayUI("PickObject"));
+            NewsStore.Subscribe<PickObject>(loaded => PlaySfx("PickObject"));
         }
 
         public void PlayMusic(string clipName)
@@ -36,15 +36,15 @@ namespace SoundPlayer
         public void PlaySfx(string clipName)
         {
             if (!clipsLoaded.ContainsKey(clipName)) return;
-            music.clip = clipsLoaded[clipName];
-            music.Play();
+            sfx.clip = clipsLoaded[clipName];
+            sfx.Play();
         }
         
         public void PlayVoice(string clipName)
         {
             if (!clipsLoaded.ContainsKey(clipName)) return;
-            music.clip = clipsLoaded[clipName];
-            music.Play();
+            voice.clip = clipsLoaded[clipName];
+            voice.Play();
         }
         
         public void PlayUI(string clipName)
