@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using MyEvents;
 using NewsSystem;
+using TMPro;
 using UnityEngine;
 
 public class ObjectList : MonoBehaviour
@@ -18,9 +19,11 @@ public class ObjectList : MonoBehaviour
     private void LoadObject(ObjectLoaded objectLoaded)
     {
         var obj = objectLoaded.obj;
-        _pickeables[obj.name] = obj;
-        Debug.Log(_pickeables.Count);
-        if (_pickeables.Count > 1)
+        var objName = obj.FantasmaConTexto.name;
+        _pickeables[objName] = obj;
+        Debug.Log(obj.name);
+        Debug.Log(objName);
+        if (objName != orderList[0].name)
         {
             obj.gameObject.SetActive(false);
         }
@@ -30,12 +33,18 @@ public class ObjectList : MonoBehaviour
     {
         if(count >= orderList.Length) return;
         var name = orderList[count].name;
-        if (data.obj == name)
+        if (data.obj != name) return;
+        
+        NewsStore.Publish(new PlayVoice
         {
-            //algo
-            count++;
+            voice = name
+        });
+        count++;
+        if (count < _pickeables.Count)
+        {
+            _pickeables[name].enabled = true;
         }
-       
+
     }
 
 }

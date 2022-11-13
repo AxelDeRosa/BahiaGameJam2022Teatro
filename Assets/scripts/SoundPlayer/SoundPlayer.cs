@@ -24,6 +24,13 @@ namespace SoundPlayer
             NewsStore.Subscribe<LevelLoaded>(loaded => PlayMusic("MusicLevel"));
             NewsStore.Subscribe<ButtonClicked>(loaded => PlayUI("Click"));
             NewsStore.Subscribe<PickObject>(loaded => PlaySfx("PickObject"));
+            NewsStore.Subscribe<PlayVoice>(OnVoiceLoaded);
+        }
+
+        private void OnVoiceLoaded(PlayVoice obj)
+        {
+            Debug.Log(obj.voice);
+            PlayVoice(obj.voice);
         }
 
         public void PlayMusic(string clipName)
