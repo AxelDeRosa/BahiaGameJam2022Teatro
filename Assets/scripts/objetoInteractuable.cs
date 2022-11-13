@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class objetoInteractuable : MonoBehaviour
 {
-
+    public GameObject FantasmaConTexto;
     [SerializeField] private ContadorObjetos contadorObjetos;
-    [SerializeField]private bool agarrado = false;
+    [SerializeField] private bool agarrado = false;
     [SerializeField] private Sprite popout;
     private SpriteRenderer spriteRender;
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class objetoInteractuable : MonoBehaviour
         if (!agarrado)
         {
             spriteRender.color = new Color(1, 0.8160377f, 0.8160377f, 1);
+            
         }
     }
     private void OnMouseExit()
@@ -33,5 +34,11 @@ public class objetoInteractuable : MonoBehaviour
         agarrado = true;
         spriteRender.sprite = popout;
         contadorObjetos.cantAgarrado += 1;
+        FantasmaConTexto.SetActive(true);
     }
+    public void cerrarTexto()
+    {
+        FantasmaConTexto.SetActive(false);
+    }
+    
 }
