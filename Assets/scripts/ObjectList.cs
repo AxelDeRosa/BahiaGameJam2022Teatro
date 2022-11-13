@@ -6,7 +6,7 @@ using UnityEngine;
 public class ObjectList : MonoBehaviour
 {
     [SerializeField] private GameObject[] orderList;
-    private Dictionary<string, GameObject> _pickeables = new Dictionary<string, GameObject>();
+    private Dictionary<string, objetoInteractuable> _pickeables = new Dictionary<string, objetoInteractuable>();
     private int count;
 
     private void Start()
@@ -19,9 +19,10 @@ public class ObjectList : MonoBehaviour
     {
         var obj = objectLoaded.obj;
         _pickeables[obj.name] = obj;
+        Debug.Log(_pickeables.Count);
         if (_pickeables.Count > 1)
         {
-            obj.SetActive(false);
+            obj.gameObject.SetActive(false);
         }
     }
 

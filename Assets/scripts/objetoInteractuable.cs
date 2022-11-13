@@ -17,7 +17,7 @@ public class objetoInteractuable : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
         NewsStore.Publish(new ObjectLoaded
         {
-            obj = FantasmaConTexto
+            obj = this
         });
     }
     private void OnMouseOver()
