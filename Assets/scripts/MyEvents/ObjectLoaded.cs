@@ -1,10 +1,11 @@
 ﻿using NewsSystem;
+using UnityEngine;
 
 namespace MyEvents
 {
-    public class PickObject :INews
+    public class ObjectLoaded : INews
     {
-        public string obj;
+        public GameObject obj;
         
         public void Publish()
         {

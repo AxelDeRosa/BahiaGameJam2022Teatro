@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738461831792638}
   m_Layer: 0
-  m_Name: Capa agarradas (1)
+  m_Name: CapaAgarrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ Transform:
   m_Children:
   - {fileID: 7417738463232578881}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738461917404505
 GameObject:
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738461917404502}
   m_Layer: 0
-  m_Name: vestido agarrado
+  m_Name: VestidoAgarrado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ Transform:
   m_Children:
   - {fileID: 7417738463810075221}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738461940606024
 GameObject:
@@ -205,6 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7417738461940606025}
+  - component: {fileID: 5219812685807534405}
   m_Layer: 0
   m_Name: Agarrar  cosas
   m_TagString: Untagged
@@ -223,15 +224,33 @@ Transform:
   m_LocalPosition: {x: 1.4200001, y: -2.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7417738463689901683}
   - {fileID: 7417738462923341288}
-  - {fileID: 7417738461831792638}
-  - {fileID: 7417738463689068215}
   - {fileID: 7417738462932141472}
+  - {fileID: 7417738463689068215}
+  - {fileID: 7417738461831792638}
   - {fileID: 7417738461917404502}
+  - {fileID: 7417738463689901683}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5219812685807534405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417738461940606024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38b1c1678962834a8bc6ccd1bc18126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderList:
+  - {fileID: 7417738462923341291}
+  - {fileID: 7417738462932141475}
+  - {fileID: 7417738463689068214}
+  - {fileID: 7417738461831792609}
+  - {fileID: 7417738461917404505}
 --- !u!1 &7417738462012257706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738462923341288}
   m_Layer: 0
-  m_Name: Cartas agarradas
+  m_Name: CartasAgarradas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1973,7 +1992,7 @@ Transform:
   m_Children:
   - {fileID: 7417738462820140441}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738462932141475
 GameObject:
@@ -1985,7 +2004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738462932141472}
   m_Layer: 0
-  m_Name: Panuelo agarrado
+  m_Name: "Pa\xF1ueloAgarrado"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2023,7 @@ Transform:
   m_Children:
   - {fileID: 7417738463873577185}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738462954498020
 GameObject:
@@ -3485,7 +3504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738463689068215}
   m_Layer: 0
-  m_Name: Crucifijo agarradas (2)
+  m_Name: CrucifijoAgarrado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3504,7 +3523,7 @@ Transform:
   m_Children:
   - {fileID: 7417738462710303722}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738463689901682
 GameObject:
@@ -3516,7 +3535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7417738463689901683}
   m_Layer: 0
-  m_Name: Entero de repuesto
+  m_Name: EnteroRespuesto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3535,7 +3554,7 @@ Transform:
   m_Children:
   - {fileID: 7417738462487200181}
   m_Father: {fileID: 7417738461940606025}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417738463810075220
 GameObject:

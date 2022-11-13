@@ -15,6 +15,10 @@ public class objetoInteractuable : MonoBehaviour
     void Start()
     {
         spriteRender = GetComponent<SpriteRenderer>();
+        NewsStore.Publish(new ObjectLoaded
+        {
+            obj = FantasmaConTexto
+        });
     }
     private void OnMouseOver()
     {
@@ -33,7 +37,11 @@ public class objetoInteractuable : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        NewsStore.Publish<PickObject>();
+        var dataEvent = new PickObject
+        {
+            obj = FantasmaConTexto.name
+        };
+        NewsStore.Publish(dataEvent);
         agarrado = true;
         spriteRender.sprite = popout;
         contadorObjetos.cantAgarrado += 1;
