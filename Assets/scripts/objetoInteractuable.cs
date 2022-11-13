@@ -35,9 +35,11 @@ public class objetoInteractuable : MonoBehaviour
         spriteRender.sprite = popout;
         contadorObjetos.cantAgarrado += 1;
         FantasmaConTexto.SetActive(true);
+        gameObject.transform.position = new Vector3(0, 0, 0);
     }
     public void cerrarTexto()
     {
+        gameObject.SetActive(false);
         FantasmaConTexto.SetActive(false);
     }
     
