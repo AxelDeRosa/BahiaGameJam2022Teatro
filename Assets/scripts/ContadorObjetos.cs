@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ContadorObjetos : MonoBehaviour
 {
+    public int cantAgarrado;
     // Start is called before the first frame update
     void Start()
     {
