@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyEvents;
+using NewsSystem;
 using UnityEngine;
 
 public class CamaraScript : MonoBehaviour
@@ -12,6 +14,8 @@ public class CamaraScript : MonoBehaviour
     void Start()
     { 
       //  comienzoLerp = this.transform.position;
+      NewsStore.Subscribe<CameraLeftPressed>(pressed => FlechaIzquierda());
+      NewsStore.Subscribe<CameraRightPressed>(pressed => FlechaDerecha());
     }
 
     // Update is called once per frame
@@ -48,7 +52,7 @@ public class CamaraScript : MonoBehaviour
             posicionActual = 1;
         }
        
-       else if (posicionActual == 1)
+        else if (posicionActual == 1)
         {
             Debug.Log("No se puede ir mas a la derecha che");
         }
