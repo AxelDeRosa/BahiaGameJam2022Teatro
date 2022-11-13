@@ -7,7 +7,10 @@ namespace SoundPlayer
 {
     public class SoundPlayer : MonoBehaviour
     {
-        [SerializeField] private AudioSource source;
+        [SerializeField] private AudioSource music;
+        [SerializeField] private AudioSource sfx;
+        [SerializeField] private AudioSource voice;
+        [SerializeField] private AudioSource ui;
         [SerializeField] private AudioClip[] audioClips;
         private Dictionary<string, AudioClip> clipsLoaded = new Dictionary<string, AudioClip>();
 
@@ -17,15 +20,38 @@ namespace SoundPlayer
             {
                 clipsLoaded[clip.name] = clip;
             }
-            NewsStore.Subscribe<MainMenuLoaded>(loaded => Play("MainMenu"));
-            NewsStore.Subscribe<LevelLoaded>(loaded => Play("MusicLevel"));
+            NewsStore.Subscribe<MainMenuLoaded>(loaded => PlayMusic("MainMenu"));
+            NewsStore.Subscribe<LevelLoaded>(loaded => PlayMusic("MusicLevel"));
+            NewsStore.Subscribe<ButtonClicked>(loaded => PlayUI("Click"));
+            NewsStore.Subscribe<PickObject>(loaded => PlayUI("PickObject"));
         }
 
-        public void Play(string clipName)
+        public void PlayMusic(string clipName)
         {
             if (!clipsLoaded.ContainsKey(clipName)) return;
-            source.clip = clipsLoaded[clipName];
-            source.Play();
+            music.clip = clipsLoaded[clipName];
+            music.Play();
+        }
+        
+        public void PlaySfx(string clipName)
+        {
+            if (!clipsLoaded.ContainsKey(clipName)) return;
+            music.clip = clipsLoaded[clipName];
+            music.Play();
+        }
+        
+        public void PlayVoice(string clipName)
+        {
+            if (!clipsLoaded.ContainsKey(clipName)) return;
+            music.clip = clipsLoaded[clipName];
+            music.Play();
+        }
+        
+        public void PlayUI(string clipName)
+        {
+            if (!clipsLoaded.ContainsKey(clipName)) return;
+            ui.clip = clipsLoaded[clipName];
+            ui.Play();
         }
     }
 }
