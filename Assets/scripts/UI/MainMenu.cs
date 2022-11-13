@@ -22,7 +22,7 @@ namespace UI
         public void StartGame()
         {
             NewsStore.Publish<ButtonClicked>();
-            SceneManager.LoadScene("SampleScene",LoadSceneMode.Additive);
+            SceneManager.LoadScene("Gameplay",LoadSceneMode.Additive);
             NewsStore.Publish<LevelLoaded>();
             SceneManager.UnloadSceneAsync("MenuStart");
         }
