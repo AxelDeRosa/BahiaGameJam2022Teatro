@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MyEvents;
 using NewsSystem;
@@ -21,7 +22,11 @@ namespace SoundPlayer
                 clipsLoaded[clip.name] = clip;
             }
             NewsStore.Subscribe<MainMenuLoaded>(loaded => PlayMusic("MainMenu"));
-            NewsStore.Subscribe<LevelLoaded>(loaded => PlayMusic("MusicLevel"));
+            NewsStore.Subscribe<LevelLoaded>(loaded =>
+            {
+                PlayMusic("MusicLevel");
+                PlayVoice("Intro_FX");
+            });
             NewsStore.Subscribe<ButtonClicked>(loaded => PlayUI("Click"));
             NewsStore.Subscribe<PickObject>(loaded => PlaySfx("PickObject"));
             NewsStore.Subscribe<PlayVoice>(OnVoiceLoaded);
@@ -59,6 +64,14 @@ namespace SoundPlayer
             if (!clipsLoaded.ContainsKey(clipName)) return;
             ui.clip = clipsLoaded[clipName];
             ui.Play();
+        }
+
+        private void Update()
+        {
+            if (voice.clip != null && voice.clip.name == "Intro_FX" && !voice.isPlaying)
+            {
+                NewsStore.Publish<IntroFin>();
+            }
         }
     }
 }
