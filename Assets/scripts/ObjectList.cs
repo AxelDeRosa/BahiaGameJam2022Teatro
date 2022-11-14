@@ -48,6 +48,10 @@ public class ObjectList : MonoBehaviour
         {
             _pickeables[ orderList[count].name].gameObject.SetActive(true);
         }
+        else
+        {
+            NewsStore.Publish<FinalFinal>();
+        }
 
     }
 

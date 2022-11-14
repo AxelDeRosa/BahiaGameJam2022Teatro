@@ -30,6 +30,7 @@ namespace SoundPlayer
             NewsStore.Subscribe<ButtonClicked>(loaded => PlayUI("Click"));
             NewsStore.Subscribe<PickObject>(loaded => PlaySfx("PickObject"));
             NewsStore.Subscribe<PlayVoice>(OnVoiceLoaded);
+            NewsStore.Subscribe<FinalFinal>(final => PlayMusic("WinLevel") );
         }
 
         private void OnVoiceLoaded(PlayVoice obj)
