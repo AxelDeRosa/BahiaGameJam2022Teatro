@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
-    [SerializeField] private GameObject[] rooms;
+    [SerializeField] private Canvas[] rooms;
     private int current = 1;
+
     void Start()
     {
         NewsStore.Subscribe<CameraLeftPressed>(LeftArrow);
@@ -14,15 +15,13 @@ public class RoomController : MonoBehaviour
 
     private void RightArrow(CameraRightPressed obj)
     {
-        rooms[current++].SetActive(false);
-        rooms[current].SetActive(true);
+        var prev = rooms[current++].sortingOrder =0;
+        var next = rooms[current].sortingOrder =1;;
     }
 
     private void LeftArrow(CameraLeftPressed obj)
     {
-        rooms[current--].SetActive(false);
-        rooms[current].SetActive(true);
+        var prev = rooms[current--].sortingOrder =0;
+        var next = rooms[current].sortingOrder =1;;
     }
-
-    
 }
