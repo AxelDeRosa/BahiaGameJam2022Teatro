@@ -5,7 +5,7 @@ namespace MyEvents
 {
     public class ObjectLoaded : INews
     {
-        public objetoInteractuable obj;
+        public ClickableObject obj;
         
         public void Publish()
         {

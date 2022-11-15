@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using MyEvents;
 using NewsSystem;
@@ -35,7 +34,6 @@ namespace SoundPlayer
 
         private void OnVoiceLoaded(PlayVoice obj)
         {
-            Debug.Log(obj.voice);
             PlayVoice(obj.voice);
         }
 
@@ -72,6 +70,13 @@ namespace SoundPlayer
             if (voice.clip != null && voice.clip.name == "Intro_FX" && !voice.isPlaying)
             {
                 NewsStore.Publish<IntroFin>();
+                voice.clip = null;
+            }
+            
+            if (voice.clip != null && voice.clip.name == "Dress" && !voice.isPlaying)
+            {
+                NewsStore.Publish<FinalFinal>();
+                voice.clip = null;
             }
         }
     }

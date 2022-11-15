@@ -1,5 +1,6 @@
 
 using System;
+using MyEvents;
 using NewsSystem;
 using UnityEngine;
 
@@ -14,29 +15,8 @@ public class FantasmaFinal : MonoBehaviour
 
     private void OnFinal(FinalFinal obj)
     {
-        animator.Play("Reverencia");
-    }
-
-    public void OnFinalReverencia()
-    {
-        
+        animator.Play("Final");
     }
 
     
-}
-
-public class FinalReverencia : INews
-{
-    public void Publish()
-    {
-        NewsStore.Publish(this);
-    }
-}
-
-public class FinalFinal : INews
-{
-    public void Publish()
-    {
-        NewsStore.Publish(this);
-    }
 }

@@ -1,14 +1,12 @@
-using System;
 using System.Collections.Generic;
 using MyEvents;
 using NewsSystem;
-using TMPro;
 using UnityEngine;
 
 public class ObjectList : MonoBehaviour
 {
-    [SerializeField] private GameObject[] orderList;
-    private Dictionary<string, objetoInteractuable> _pickeables = new Dictionary<string, objetoInteractuable>();
+    [SerializeField] private ClickableList[] orderList;
+    private readonly Dictionary<ClickableList, ClickableObject> pickable = new();
     private int count;
 
     private void Awake()
@@ -25,9 +23,9 @@ public class ObjectList : MonoBehaviour
     private void LoadObject(ObjectLoaded objectLoaded)
     {
         var obj = objectLoaded.obj;
-        var objName = obj.FantasmaConTexto.name;
-        _pickeables[objName] = obj;
-        if (objName != orderList[0].name)
+        var clickable = obj.GetClickable();
+        pickable[clickable] = obj;
+        if (clickable != orderList[0])
         {
             obj.gameObject.SetActive(false);
         }
@@ -36,23 +34,18 @@ public class ObjectList : MonoBehaviour
     private void PickObject(PickObject data)
     {
         if(count >= orderList.Length) return;
-        var name = orderList[count].name;
-        if (data.obj != name) return;
+        var name = orderList[count];
+        if (data.Clickable != name) return;
         
         NewsStore.Publish(new PlayVoice
         {
-            voice = name
+            voice = name.ToString()
         });
         count++;
-        if (count < _pickeables.Count)
+        if (count < pickable.Count)
         {
-            _pickeables[ orderList[count].name].gameObject.SetActive(true);
+            pickable[orderList[count]].gameObject.SetActive(true);
         }
-        else
-        {
-            NewsStore.Publish<FinalFinal>();
-        }
-
     }
 
 }
