@@ -1,3 +1,4 @@
+using System;
 using MyEvents;
 using NewsSystem;
 using NewsSystem.Sample;
@@ -26,10 +27,11 @@ namespace UI
             NewsStore.Publish<LevelLoaded>();
             SceneManager.UnloadSceneAsync("MenuStart");
         }
-
         public void StartCredits()
         {
-            
+            NewsStore.Publish<ButtonClicked>();
+            SceneManager.LoadScene("Credits",LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("MenuStart");
         }
     }
 }

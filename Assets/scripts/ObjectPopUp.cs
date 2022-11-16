@@ -19,9 +19,13 @@ public class ObjectPopUp : MonoBehaviour
 
     private void OnPickObject(PickObject obj)
     {
-        if (obj.Clickable == clickableList)
-        {
-            canvas.gameObject.SetActive(true);
-        }
+        if (obj.Clickable != clickableList) return;
+        canvas.gameObject.SetActive(true);
+        NewsStore.Publish<DialogLoaded>();
+    }
+
+    public void EndPopUp()
+    {
+        NewsStore.Publish<DialogUnloaded>();
     }
 }

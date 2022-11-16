@@ -12,7 +12,7 @@ namespace SoundPlayer
         [SerializeField] private AudioSource voice;
         [SerializeField] private AudioSource ui;
         [SerializeField] private AudioClip[] audioClips;
-        private Dictionary<string, AudioClip> clipsLoaded = new Dictionary<string, AudioClip>();
+        private Dictionary<string, AudioClip> clipsLoaded = new();
 
         private void Start()
         {
@@ -30,6 +30,7 @@ namespace SoundPlayer
             NewsStore.Subscribe<PickObject>(loaded => PlaySfx("PickObject"));
             NewsStore.Subscribe<PlayVoice>(OnVoiceLoaded);
             NewsStore.Subscribe<FinalFinal>(final => PlayMusic("WinLevel") );
+            NewsStore.Subscribe<CreditsLoaded>(_ => PlayMusic("Credits"));
         }
 
         private void OnVoiceLoaded(PlayVoice obj)
@@ -69,6 +70,7 @@ namespace SoundPlayer
         {
             if (voice.clip != null && voice.clip.name == "Intro_FX" && !voice.isPlaying)
             {
+                NewsStore.Publish<DialogUnloaded>();
                 NewsStore.Publish<IntroFin>();
                 voice.clip = null;
             }
