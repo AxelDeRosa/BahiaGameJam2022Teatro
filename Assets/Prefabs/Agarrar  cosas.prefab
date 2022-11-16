@@ -57,22 +57,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7417738461940606025}
     m_Modifications:
-    - target: {fileID: 643411196376210633, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 92b9b09ea337d9945907edc0ffc7be1e, type: 3}
-    - target: {fileID: 1751528807646126840, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 759
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751528807646126840, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 823
-      objectReference: {fileID: 0}
-    - target: {fileID: 5956795225783840630, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: clickableList
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6121011778648836156, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
       propertyPath: m_Name
       value: DressPopUp
@@ -121,14 +105,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6121011778745206085, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c6c84d481d36a7346b041a4cd0853c54, type: 3}
-    - target: {fileID: 6121011778782835245, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 378f3ca335a0cfc46afb0729db8cccc8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc950e074f2df584fa08014d953c1a42, type: 3}
 --- !u!4 &5935600858529258726 stripped
@@ -143,26 +119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7417738461940606025}
     m_Modifications:
-    - target: {fileID: 2343888173746475640, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c22316b5c97787843a632f11609896c6, type: 3}
-    - target: {fileID: 3468999701946887241, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 519
-      objectReference: {fileID: 0}
-    - target: {fileID: 3468999701946887241, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 721
-      objectReference: {fileID: 0}
-    - target: {fileID: 8845134815585903047, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
-      propertyPath: clickableList
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8978138314631646196, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0afbf586c65ca1f4d81138c948ead1fc, type: 3}
     - target: {fileID: 8978138315869783693, guid: c704e76b57fa9644eaa6455b1e553280, type: 3}
       propertyPath: m_Name
       value: CrucifixPopup
@@ -225,22 +181,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7417738461940606025}
     m_Modifications:
-    - target: {fileID: 3271576032968812287, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b8fb2b7d2ab24d74f97254fc97641130, type: 3}
-    - target: {fileID: 4451117913672685774, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 578
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451117913672685774, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 690
-      objectReference: {fileID: 0}
-    - target: {fileID: 8176586163023118195, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 20348c2af3ed8b845b389cbaef552729, type: 3}
     - target: {fileID: 8176586163185938953, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -289,10 +229,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Pa\xF1ueloPopUp"
       objectReference: {fileID: 0}
-    - target: {fileID: 8584401514227586368, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
-      propertyPath: clickableList
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c7922ac19df6924e8ac6c6f9e11c145, type: 3}
 --- !u!4 &3818326658844155259 stripped
@@ -307,10 +243,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7417738461940606025}
     m_Modifications:
-    - target: {fileID: 343038898526581636, guid: 879850f40b44153459f455006f81b2d6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9d0e12613e8d92e498fcdfa6ad5be533, type: 3}
     - target: {fileID: 343038900301659901, guid: 879850f40b44153459f455006f81b2d6, type: 3}
       propertyPath: m_Name
       value: CardsPopUp
@@ -359,10 +291,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6403363121825917448, guid: 879850f40b44153459f455006f81b2d6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fdffd2099aadb2f408827d6d9d1b311c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879850f40b44153459f455006f81b2d6, type: 3}
 --- !u!4 &7417738462923341288 stripped
@@ -377,22 +305,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7417738461940606025}
     m_Modifications:
-    - target: {fileID: 2355777316556244499, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2a5411f87f7f9024e93594599d43d1c5, type: 3}
-    - target: {fileID: 3463852803424598050, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 801
-      objectReference: {fileID: 0}
-    - target: {fileID: 3463852803424598050, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 818
-      objectReference: {fileID: 0}
-    - target: {fileID: 8860397258057184684, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
-      propertyPath: clickableList
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8984274601242120933, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -441,10 +353,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoatPopUp
       objectReference: {fileID: 0}
-    - target: {fileID: 8984274601950732191, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: da2a60ec6bb6dfc47bde21c59587c395, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab9c80379b0ef34088cb7676389dd7b, type: 3}
 --- !u!4 &1508850994948650935 stripped

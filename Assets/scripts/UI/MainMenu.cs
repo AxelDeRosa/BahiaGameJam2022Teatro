@@ -26,5 +26,10 @@ namespace UI
             NewsStore.Publish<LevelLoaded>();
             SceneManager.UnloadSceneAsync("MenuStart");
         }
+
+        public void StartCredits()
+        {
+            
+        }
     }
 }

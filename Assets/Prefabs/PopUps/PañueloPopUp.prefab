@@ -7,9 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3114480950334838600, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 578
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114480950334838600, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 690
+      objectReference: {fileID: 0}
+    - target: {fileID: 4295218899570583929, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8fb2b7d2ab24d74f97254fc97641130, type: 3}
+    - target: {fileID: 7051718329155132102, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: clickableList
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459163916223295733, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20348c2af3ed8b845b389cbaef552729, type: 3}
+    - target: {fileID: 7459163916252514205, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459163916252514205, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459163916252514205, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7459163916387040652, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
       propertyPath: m_Name
-      value: PopUp
+      value: "Pa\xF1ueloPopUp"
       objectReference: {fileID: 0}
     - target: {fileID: 7459163916387040655, guid: 9efbdf2b0cbf4f9498bee55daff15d08, type: 3}
       propertyPath: m_RootOrder
